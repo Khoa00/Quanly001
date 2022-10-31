@@ -1,0 +1,86 @@
+﻿@model Thuctap01.Models.QuanlyhocphiModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Mahocvien" />
+            <div class="form-group">
+                <label asp-for="Mahocvien" class="control-label"></label>
+                <input asp-for="Mahocvien" class="form-control" />
+                <span asp-validation-for="Mahocvien " class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tenhocvien" class="control-label"></label>
+                <input asp-for="Tenhocvien" class="form-control" />
+                <span asp-validation-for="Tenhocvien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lop" class="control-label"></label>
+                <input asp-for="lop" class="form-control" />
+                <span asp-validation-for="lop" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Khoakhoi" class="control-label"></label>
+                <input asp-for="Khoakhoi" class="form-control" />
+                <span asp-validation-for="Khoakhoi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Doituong" class="control-label"></label>
+                <input asp-for="Doituong" class="form-control" />
+                <span asp-validation-for="Doituong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DienThoai" class="control-label"></label>
+                <input asp-for="DienThoai" class="form-control" />
+                <span asp-validation-for="DienThoai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NgayNhapHoc" class="control-label"></label>
+                <input asp-for="NgayNhapHoc" class="form-control" />
+                <span asp-validation-for="NgayNhapHoc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hocphi" class="control-label"></label>
+                <input asp-for="Hocphi" class="form-control" />
+                <span asp-validation-for="Hocphi" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+            <label asp-for="Tonghocphi" class="control-label"></label>
+            <input asp-for="Tonghocphi" class="form-control" />
+            <span asp-validation-for="Tonghocphi" class="text-danger"></span>
+        </div>*@
+            <div class="form-group">
+                <label asp-for="Trangthai" class="control-label"></label>
+                <input asp-for="Trangthai" class="form-control" />
+                <span asp-validation-for="Trangthai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Thucthu" class="control-label"></label>
+                <input asp-for="Thucthu" class="form-control" />
+                <span asp-validation-for="Thucthu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ngaythu" class="control-label"></label>
+                <input asp-for="Ngaythu" class="form-control" />
+                <span asp-validation-for="Ngaythu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Quay Lại</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
