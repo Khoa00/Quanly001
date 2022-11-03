@@ -9,35 +9,134 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
+        <div class="container">
+            @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Thuctap01</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>*@
+                
+            @*</nav>*@
+            <div class="row g-3">
+                <nav class="col-md-2" style="background: orange;">
+                    <div class="card-header" id="headingOne">
+                        <h3 class="mb-0">
+                            <button class="btn btn-link" style="height: 60px; width: 110px ">
+                                <div class="col-md-4">
+                                    <a style="color:black"><h5>ALATA</h5></a>
+                                    <a style="color:white"><h5>Media</h5></a>
+                                </div>
+                            </button>
+                        </h3>
+                    </div>
+                </nav>
+                <nav class="col-md-10" style="background: white;"></nav>
+                <aside class="col-md-2" style="height:700px;background: darkblue">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne" style="background: darkblue;">
+                                <h3 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white">
+                                        <a asp-controller="Home" asp-action="Index">
+                                            TRANG CHỦ
+                                        </a>
+                                    </button>
+                                </h3>
+                            </div>
+                            <div class="card" style="background: mediumblue;">
+                                <div class="card-header" id="headingOne">
+                                    <h3 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white">
+                                            QUẢN LÝ HỌC PHÍ
+                                        </button>
+                                    </h3>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body p-0">
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><a asp-controller="MucHocPhi" asp-action="Index">Danh sách mức học phí</a></li>
+                                            <li class="list-group-item"><a asp-controller="QuanLyHocPhi" asp-action="Index">Quản lý học phí</a></li>
+                                            <li class="list-group-item">Báo Cáo Học Phí</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" style="background: mediumblue; ">
+                                <div class="card-header" id="headingOne">
+                                    <h4 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white">
+                                            QUẢN LÝ LƯƠNG
+                                        </button>
+                                    </h4>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body p-0">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Hồ sơ giảng viên</li>
+                                            <li class="list-group-item">Tính lương</li>
+                                            <li class="list-group-item">Báo cáo chi lương</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" style="background: mediumblue; ">
+                                <div class="card-header" id="headingTwo">
+                                    <h4 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: white">
+                                            THÔNG BÁO
+                                        </button>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body p-0">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Thông báo bủa Ttôi</li>
+                                            <li class="list-group-item">Dành cho học viên</li>
+                                            <li class="list-group-item">Dành cho giảng viên</li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" style="background: mediumblue; ">
+                                <div class="card-header" id="headingThree">
+                                    <h4 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: white">
+                                            HỆ THỐNG
+                                        </button>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body p-0">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Cài đặt quản lý học phí</li>
+                                            <li class="list-group-item">Cài đặt quản lý lương</li>
+                                            <li class="list-group-item">Số hiệu hệ thống</li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <article class="col-md-10">
+                    <div class="container">
+                        <main role="main" class="pb-3" style="background:white">
+                            @RenderBody()
+                        </main>
+                    </div>
+                </article>
             </div>
-        </nav>
+        </div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Thuctap01 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container" style="text-align:center">
+            a copyright Alta Media 2020 All rights reserved</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
