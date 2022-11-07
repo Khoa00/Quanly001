@@ -14,7 +14,7 @@ namespace Thuctap01.Models
         [Display(Name = "Mã môn học")]
         public int Mamonhoc { get; set; }
 
-        [Required(ErrorMessage = "Bạn Cần Nhập Môn Học")]
+        [Required(ErrorMessage = "Bạn Cần Nhập Tên Môn Học")]
         [Display(Name = "Môn học")]
         [StringLength(100)]
         public string Monhoc { get; set; }

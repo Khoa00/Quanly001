@@ -9,7 +9,7 @@ namespace Thuctap01.Models
 {
     public class QuanlyhocphiModel
     {
-        [Key]
+        [Key]   
         [Required(ErrorMessage = "Bạn Cần Nhập Mã Học Viên")]
         [Display(Name = "Mã học viên")]
         public int Mahocvien { get; set; }
@@ -23,6 +23,10 @@ namespace Thuctap01.Models
         [Display(Name = "Lớp")]
         [StringLength(100)]
         public string lop { get; set; }
+
+        [Required(ErrorMessage = "Bạn Cần Nhập Niên Khóa")]
+        [Display(Name = "Niên Khóa")]
+        public double nienkhoa { get; set; }
 
         [Required(ErrorMessage = "Bạn Cần Khoa-Khối")]
         [Display(Name = "Khoa-Khối")]

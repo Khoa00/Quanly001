@@ -21,7 +21,7 @@ namespace Thuctap01.Models
 
         public DbSet<MuchocphiModel> MuchocphiModels { get; set; }
         public DbSet<QuanlyhocphiModel> QuanyhocphiModelss { get; set; }
-        public DbSet<Luong> Luongs { get; set; }
+        public DbSet<LuongModel> Luongs { get; set; }
         public DbSet<DangnhapModel> DangnhapModels { get; set; }
     }
 }

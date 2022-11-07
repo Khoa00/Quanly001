@@ -18,11 +18,11 @@ namespace Thuctap01.Controllers
         }
         public IActionResult Index()
         {
-            return View(_quanlyhocphi.GetQuanlyhocphiModelAll());
+            return View(_quanlyhocphi.GetQuanlyhocphiAll());
         }
         public ActionResult Details(int id)
         {
-            var muchocphi = _quanlyhocphi.GetQuanlyhocphiModel(id);
+            var muchocphi = _quanlyhocphi.GetQuanlyhocphi(id);
             return View(muchocphi);
         }
         public ActionResult Create()
@@ -37,7 +37,7 @@ namespace Thuctap01.Controllers
             try
             {
 
-                _quanlyhocphi.AddQuanlyhocphiModel(quanlyhocphi);
+                _quanlyhocphi.AddQuanlyhocphi(quanlyhocphi);
                 return RedirectToAction(nameof(Details), new { id = quanlyhocphi.Mahocvien});
                 //return RedirectToAction("Index");
             }
@@ -48,7 +48,7 @@ namespace Thuctap01.Controllers
         }
         public ActionResult Edit(int id)
         {
-            var quanlyhocphi = _quanlyhocphi.GetQuanlyhocphiModel(id);
+            var quanlyhocphi = _quanlyhocphi.GetQuanlyhocphi(id);
             return View(quanlyhocphi);
         }
         [HttpPost]
@@ -59,7 +59,7 @@ namespace Thuctap01.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _quanlyhocphi.EditQuanlyhocphiModel(id, quanlyhocphi);
+                    _quanlyhocphi.EditQuanlyhocphi(id, quanlyhocphi);
                     return RedirectToAction(nameof(Details), new { id = quanlyhocphi.Mahocvien });
                 }
             }
@@ -68,6 +68,18 @@ namespace Thuctap01.Controllers
 
             }
             return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Thuhocphi()
+        {
+            return View();
+        }
+        public IActionResult Thongtinlichsu()
+        {
+            return View();
+        }
+        public IActionResult Baocaohocphi()
+        {
+            return View();
         }
     }
 }

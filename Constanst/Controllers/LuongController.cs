@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 using Thuctap01.Models;
 using Thuctap01.Services;
 
-namespace Thuctap01.Controllers
+namespace Thuctap01.Constanst.Controllers
 {
-    public class MucHocPhiController : Controller
+    public class LuongController : Controller
     {
         protected DataBaseContext _context;
-        private IMuchocphi _Muchocphi;
-        public MucHocPhiController(DataBaseContext context, IMuchocphi muchocphi)
+        private ILuong _luong;
+        public LuongController(DataBaseContext context, ILuong luong)
         {
-             _Muchocphi = muchocphi;
+            _luong = luong;
         }
         public IActionResult Index()
         {
-            return View(_Muchocphi.GetMuchocphiAll());
+            return View(_luong.GetLuongAll());
         }
         public ActionResult Details(int id)
         {
-            var muchocphi = _Muchocphi.GetMuchocphi(id);
-            return View(muchocphi);
+            var luong = _luong.GetLuong(id);
+            return View(luong);
         }
         public ActionResult Create()
         {
@@ -32,13 +32,13 @@ namespace Thuctap01.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(MuchocphiModel muchocphi)
+        public ActionResult Create(LuongModel luong)
         {
             try
             {
 
-                _Muchocphi.AddMuchocphi(muchocphi);
-                return RedirectToAction(nameof(Details), new { id = muchocphi.Mamonhoc });
+                _luong.AddLuong(luong);
+                return RedirectToAction(nameof(Details), new { id = luong.IDLuong });
                 //return RedirectToAction("Index");
             }
             catch
@@ -48,19 +48,19 @@ namespace Thuctap01.Controllers
         }
         public ActionResult Edit(int id)
         {
-            var muchocphi = _Muchocphi.GetMuchocphi(id);
-            return View(muchocphi);
+            var luong = _luong.GetLuong(id);
+            return View(luong);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, MuchocphiModel muchocphi)
+        public ActionResult Edit(int id, LuongModel luong)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    _Muchocphi.EditMuchocphi(id, muchocphi);
-                    return RedirectToAction(nameof(Details), new { id = muchocphi.Mamonhoc });
+                    _luong.Editluong(id, luong);
+                    return RedirectToAction(nameof(Details), new { id = luong.IDLuong });
                 }
             }
             catch
@@ -68,10 +68,6 @@ namespace Thuctap01.Controllers
 
             }
             return RedirectToAction(nameof(Index));
-        }
-        public IActionResult Thuhocphi()
-        {
-            return View();
         }
     }
 }

@@ -6,39 +6,38 @@ using System.Threading.Tasks;
 using Thuctap01.Models;
 using Thuctap01.Services;
 
-namespace Thuctap01.Controllers
+namespace Thuctap01.Constanst.Controllers
 {
-    public class MucHocPhiController : Controller
+    public class GiangVienController : Controller
     {
         protected DataBaseContext _context;
-        private IMuchocphi _Muchocphi;
-        public MucHocPhiController(DataBaseContext context, IMuchocphi muchocphi)
+        private IGiangvien _giangvien;
+        public GiangVienController(DataBaseContext context, IGiangvien giangvien)
         {
-             _Muchocphi = muchocphi;
+            _giangvien = giangvien;
         }
         public IActionResult Index()
         {
-            return View(_Muchocphi.GetMuchocphiAll());
+            return View(_giangvien.GetgiangvienModelAll());
         }
         public ActionResult Details(int id)
         {
-            var muchocphi = _Muchocphi.GetMuchocphi(id);
-            return View(muchocphi);
+            var giangvien = _giangvien.GetgiangvienModel(id);
+            return View(giangvien);
         }
         public ActionResult Create()
         {
-
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(MuchocphiModel muchocphi)
+        public ActionResult Create(GiangvienModel giangvien)
         {
             try
             {
 
-                _Muchocphi.AddMuchocphi(muchocphi);
-                return RedirectToAction(nameof(Details), new { id = muchocphi.Mamonhoc });
+                _giangvien.AddGiangvienModel(giangvien);
+                return RedirectToAction(nameof(Details), new { id = giangvien.Magiangvien });
                 //return RedirectToAction("Index");
             }
             catch
@@ -48,19 +47,19 @@ namespace Thuctap01.Controllers
         }
         public ActionResult Edit(int id)
         {
-            var muchocphi = _Muchocphi.GetMuchocphi(id);
-            return View(muchocphi);
+            var giangvien = _giangvien.GetgiangvienModel(id);
+            return View(giangvien);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, MuchocphiModel muchocphi)
+        public ActionResult Edit(int id, GiangvienModel giangvien)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    _Muchocphi.EditMuchocphi(id, muchocphi);
-                    return RedirectToAction(nameof(Details), new { id = muchocphi.Mamonhoc });
+                    _giangvien.EditgiangvienModel(id, giangvien);
+                    return RedirectToAction(nameof(Details), new { id = giangvien.Magiangvien });
                 }
             }
             catch
@@ -68,10 +67,6 @@ namespace Thuctap01.Controllers
 
             }
             return RedirectToAction(nameof(Index));
-        }
-        public IActionResult Thuhocphi()
-        {
-            return View();
         }
     }
 }

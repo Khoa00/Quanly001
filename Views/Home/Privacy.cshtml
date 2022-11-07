@@ -2,7 +2,11 @@
     ViewData["Title"] = "";
     Layout = "";
 }
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     @*Required meta tags*@
     <meta charset="utf-8">
@@ -21,12 +25,13 @@
 </head>
 <body>
     <br />
+
     <div class="container px-4">
         <div class="row gx-5">
             <div class="col">
                 <img src="~/image/logodangnhap.png" style="width:550px;height:700px" />
             </div>
-           
+
             <div class="col">
                 <br /><br /><br /><br /><br />
                 <h3><p style="text-align:center">ĐĂNG NHẬP HỆ THỐNG</p></h3>
@@ -34,7 +39,7 @@
                 <div class="row g-3">
                     <div class="col-md-4">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
                             <label class="form-check-label" for="exampleRadios1">
                                 Học Viên
                             </label>
@@ -50,18 +55,18 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option3" checked>
+                            <label class="form-check-label" for="exampleRadios3">
                                 Quản lý
                             </label>
                         </div>
                     </div>
                     <div class="row g-3">
                         <div class="col-sm-11">
-                            <input type="text" class="form-control" placeholder="Tên Đăng Nhập" aria-label="Tên Đăng Nhập">
+                            <input type="text" class="form-control" placeholder="Tên Đăng Nhập" aria-label="Tên Đăng Nhập" >
                         </div>
                         <div class="col-sm-11">
-                            <input type="text" class="form-control" placeholder="Mật khẩu" aria-label="Mật khẩu">
+                            <input type="password" class="form-control" placeholder="Mật khẩu" aria-label="Mật khẩu">
                         </div>
                     </div>
                     <div class="row g-3">
@@ -79,7 +84,7 @@
                     <div class="row g-3">
                         <div class="col-md-12" style="text-align:center">
                             <br />
-                            <button type="button" class="btn btn-warning" style="color:white;width:200px;height:45px">Đăng nhập</button>
+                            <button type="button" class="btn btn-warning" style="color:white;width:200px;height:45px;color:white"><a asp-controller="Home" asp-action="Index"> Đăng nhập</a></button>
                         </div>
                         <div class="col-md-12" style="text-align:center">
                             <br /><br /><br /><br /><br /><br />
@@ -91,3 +96,4 @@
         </div>
     </div>
 </body>
+</html>

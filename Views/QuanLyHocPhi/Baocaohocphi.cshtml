@@ -1,0 +1,148 @@
+﻿
+@{
+    ViewData["Title"] = "Baocaohocphi";
+}
+<form class="row g-3">
+    <div class="col-md-6">
+        <b>Quản lý học phí > <a style="color:orange" asp-action="">Báo cáo thu học phí</a></b>
+    </div>
+</form>
+<br /><br />
+<div class="row g-2">
+    <div class="col-md">
+        <h3>Danh Sách Báo Cáo</h3>
+    </div>
+    <div class="col-md" style="text-align:right">
+        <button style="background: cornflowerblue; border-radius: 7px; height: 43px;"><a asp-action="Create" style="color: white">Thêm hiển thị</a></button>
+        <button style="background: royalblue; border-radius: 7px; color: white; width: 200px; height: 43px;">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Xuất Dữ Liệu</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item">Xuất XSL</a></li>
+                <li><a class="dropdown-item">Xuất XSL</a></li>
+            </ul>
+        </button>
+    </div>
+</div>
+<nav class="navbar navbar-light bg-light">
+    <div class="row  g-3">
+        <div class="col-md-3">
+            <select class="form-select" aria-label="Default select example" style="color: black; width: 200px;height:40px">
+                <option selected>Tất cả học kì</option>
+                <option value="1">2019</option>
+                <option value="2">2020</option>
+                <option value="3">2021</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select class="form-select" aria-label="Default select example" style="color: black; width: 200px; height: 40px ">
+                <option selected>Tất cả khoa-khối</option>
+                <option value="1">Khối 7</option>
+                <option value="2">Khối 8</option>
+                <option value="3">Khối 9</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select class="form-select" aria-label="Default select example" style="color: black; width: 200px; height: 40px ">
+                <option selected>[Tùy chọn lớp học]</option>
+                <option value="1">Tất cả lớp học</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-group" type="submit" style="background: orange; color: white; width: 95px;height:40px">Tìm Kiếm </button>
+            <button class="btn btn-group" type="submit" style="background: blue; color: white; width: 90px; height: 40px">Hoàn tác </button>
+        </div>
+        <br /><br />
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr style="color: black; background: blanchedalmond">
+                        <th scope="col">
+                            STT
+                        </th>
+                        <th scope="col">
+                            Khoa-khối 
+                        </th>
+                        <th scope="col">
+                            Học viên(Người)
+                        </th>
+                        <th scope="col">
+                            Thực thu(VNĐ)
+                        </th>
+                        <th scope="col">
+                            Chưa thu(VNĐ)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Công nghệ thông tin </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Kinh tế </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Tài chinh </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Ngân hàng</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Kế toán</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Quản trị</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Du lịch</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Kinh doanh quốc tế</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Luật</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr ROWSPAN = 2>
+                        <td><b>Tổng Cộng</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</nav>
+

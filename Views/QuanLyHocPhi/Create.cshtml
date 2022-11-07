@@ -3,12 +3,10 @@
 @{
     ViewData["Title"] = "Create";
 }
-<h4>QuanlyhocphiModel</h4>
 <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title">Thêm Học Phí</h5>
-            
         </div>
         <div class="modal-body">
             <form class="row g-3" asp-action="Create">
@@ -54,6 +52,11 @@
                     <input asp-for="Hocphi" class="form-control" />
                     <span asp-validation-for="Hocphi" class="text-danger"></span>
                 </div>
+                @*<div class="col-md-6">
+                    <label asp-for="Tonghocphi" class="control-label"></label>
+                    <input asp-for="Tonghocphi" class="form-control" />
+                    <span asp-validation-for="Tonghocphi" class="text-danger"></span>
+                </div>*@
                 <div class="col-md-6">
                     <label asp-for="Trangthai" class="control-label"></label>
                     <input asp-for="Trangthai" class="form-control" />
@@ -69,20 +72,30 @@
                     <input asp-for="Ngaythu" class="form-control" />
                     <span asp-validation-for="Ngaythu" class="text-danger"></span>
                 </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="col-1">
+                            <input type="submit" value="Lưu" class="btn btn-primary" style="text-align:left;background:orangered" />
+                        </div>
+                        <div class="col-2">
+                            <a asp-action="Index" class="btn btn-primary">Quay Lại</a>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
-        <div class="modal-footer">
+        @*<div class="modal-footer">
             <div class="row">
                 <div class="col-md-4">
                     <div class="col-1">
-                        <input type="submit" value="Create" class="btn btn-primary" style="text-align:left;background:orangered" />
+                        <input type="submit" value="Lưu" class="btn btn-primary" style="text-align:left;background:orangered" />
                     </div>
                     <div class="col-2">
                         <a asp-action="Index" class="btn btn-primary">Quay Lại</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>*@
     </div>
 </div>
 

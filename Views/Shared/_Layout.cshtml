@@ -22,22 +22,22 @@
                 <nav class="col-md-2" style="background: orange;">
                     <div class="card-header" id="headingOne">
                         <h3 class="mb-0">
-                            <button class="btn btn-link" style="height: 60px; width: 110px ">
+                            <button class="btn btn-link" style="height: 60px; width: 110px; text-decoration: none" >
                                 <div class="col-md-4">
-                                    <a style="color:black"><h5>ALATA</h5></a>
-                                    <a style="color:white"><h5>Media</h5></a>
+                                    <a style="color: black; "><h5>ALATA</h5></a>
+                                    <a style="color:white;"><h5>Media</h5></a>
                                 </div>
                             </button>
                         </h3>
                     </div>
                 </nav>
                 <nav class="col-md-10" style="background: white;"></nav>
-                <aside class="col-md-2" style="height:700px;background: darkblue">
+                <aside class="col-md-2" style="height:1000px;background: darkblue">
                     <div class="accordion" id="accordionExample">
                         <div class="card">
                             <div class="card-header" id="headingOne" style="background: darkblue;">
                                 <h3 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white; text-decoration: none">
                                         <a asp-controller="Home" asp-action="Index">
                                             TRANG CHỦ
                                         </a>
@@ -47,7 +47,7 @@
                             <div class="card" style="background: mediumblue;">
                                 <div class="card-header" id="headingOne">
                                     <h3 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white; text-decoration: none">
                                             QUẢN LÝ HỌC PHÍ
                                         </button>
                                     </h3>
@@ -56,9 +56,9 @@
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body p-0">
                                         <ul class="list-group">
-                                            <li class="list-group-item"><a asp-controller="MucHocPhi" asp-action="Index">Danh sách mức học phí</a></li>
-                                            <li class="list-group-item"><a asp-controller="QuanLyHocPhi" asp-action="Index">Quản lý học phí</a></li>
-                                            <li class="list-group-item">Báo Cáo Học Phí</li>
+                                            <li class="list-group-item"><a asp-controller="MucHocPhi" asp-action="Index" style="text-decoration: none">Danh sách mức học phí</a></li>
+                                            <li class="list-group-item"><a asp-controller="QuanLyHocPhi" asp-action="Index" style="text-decoration: none">Quản lý học phí</a></li>
+                                            <li class="list-group-item"><a asp-controller="QuanLyHocPhi" asp-action="Baocaohocphi" style="text-decoration: none">Báo Cáo Học Phí</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -66,7 +66,7 @@
                             <div class="card" style="background: mediumblue; ">
                                 <div class="card-header" id="headingOne">
                                     <h4 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white; text-decoration: none">
                                             QUẢN LÝ LƯƠNG
                                         </button>
                                     </h4>
@@ -75,7 +75,7 @@
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body p-0">
                                         <ul class="list-group">
-                                            <li class="list-group-item">Hồ sơ giảng viên</li>
+                                            <li class="list-group-item"><a asp-controller="GiangVien" asp-action="Index" style="text-decoration: none">Hồ sơ giảng viên</a></li>
                                             <li class="list-group-item">Tính lương</li>
                                             <li class="list-group-item">Báo cáo chi lương</li>
                                         </ul>
@@ -85,7 +85,7 @@
                             <div class="card" style="background: mediumblue; ">
                                 <div class="card-header" id="headingTwo">
                                     <h4 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: white">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: white; text-decoration: none" >
                                             THÔNG BÁO
                                         </button>
                                     </h4>
@@ -104,7 +104,7 @@
                             <div class="card" style="background: mediumblue; ">
                                 <div class="card-header" id="headingThree">
                                     <h4 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: white">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: white; text-decoration: none">
                                             HỆ THỐNG
                                         </button>
                                     </h4>
@@ -115,7 +115,6 @@
                                             <li class="list-group-item">Cài đặt quản lý học phí</li>
                                             <li class="list-group-item">Cài đặt quản lý lương</li>
                                             <li class="list-group-item">Số hiệu hệ thống</li>
-
                                         </ul>
                                     </div>
                                 </div>
@@ -125,7 +124,7 @@
                 </aside>
                 <article class="col-md-10">
                     <div class="container">
-                        <main role="main" class="pb-3" style="background:white">
+                        <main role="main" class="pb-3" style="background: white;">
                             @RenderBody()
                         </main>
                     </div>

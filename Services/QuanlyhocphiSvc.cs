@@ -8,32 +8,27 @@ namespace Thuctap01.Services
 {
     public interface IQuanlyhocphi
     {
-        List<QuanlyhocphiModel> GetQuanlyhocphiModelAll();
-        int AddQuanlyhocphiModel(QuanlyhocphiModel quanlyhocphi);
-        QuanlyhocphiModel GetQuanlyhocphiModel(int id);
-        int EditQuanlyhocphiModel(int id, QuanlyhocphiModel quanlyhocphi);
+        List<QuanlyhocphiModel> GetQuanlyhocphiAll();
+        int AddQuanlyhocphi(QuanlyhocphiModel quanlyhocphi);
+        QuanlyhocphiModel GetQuanlyhocphi(int id);
+        int EditQuanlyhocphi(int id, QuanlyhocphiModel quanlyhocphi);
     }
     public class QuanlyhocphiSvc : IQuanlyhocphi
     {
-            protected DataBaseContext _context;
+        protected DataBaseContext _context;
 
-            public QuanlyhocphiSvc(DataBaseContext context)
-            {
-                _context = context;
-            }
-        public List<QuanlyhocphiModel> GetQuanlyhocphiModelAll()
+        public QuanlyhocphiSvc(DataBaseContext context)
+        {
+            _context = context;
+        }
+        public List<QuanlyhocphiModel> GetQuanlyhocphiAll()
         {
             List<QuanlyhocphiModel> list = new List<QuanlyhocphiModel>();
             list = _context.QuanyhocphiModelss.ToList();
             return list;
         }
-        public QuanlyhocphiModel GetQuanlyhocphiModel(int id)
-        {
-            QuanlyhocphiModel quanlyhocphi = null;
-            quanlyhocphi = _context.QuanyhocphiModelss.Find(id);
-            return quanlyhocphi;
-        }
-        public int AddQuanlyhocphiModel(QuanlyhocphiModel quanlyhocphi)
+       
+        public int AddQuanlyhocphi(QuanlyhocphiModel quanlyhocphi)
         {
             int ret = 0;
             try
@@ -48,19 +43,25 @@ namespace Thuctap01.Services
             }
             return ret;
         }
-        public int EditQuanlyhocphiModel(int id, QuanlyhocphiModel quanlyhocphi)
+        public QuanlyhocphiModel GetQuanlyhocphi(int id)
+        {
+            QuanlyhocphiModel quanlyhocphi = null;
+            quanlyhocphi = _context.QuanyhocphiModelss.Find(id);
+            return quanlyhocphi;
+        }
+        public int EditQuanlyhocphi(int id, QuanlyhocphiModel quanlyhocphi)
         {
             int ret = 0;
             try
             {
                 QuanlyhocphiModel _quanlyhocphi = null;
-                _quanlyhocphi = GetQuanlyhocphiModel(id);
+                _quanlyhocphi = GetQuanlyhocphi(id);
 
                 _quanlyhocphi.Mahocvien = quanlyhocphi.Mahocvien;
                 _quanlyhocphi.Tenhocvien = quanlyhocphi.Tenhocvien;
                 _quanlyhocphi.lop = quanlyhocphi.lop;
-                _quanlyhocphi.Khoakhoi = quanlyhocphi.Khoakhoi;
-                
+                _quanlyhocphi.nienkhoa = quanlyhocphi.nienkhoa;
+                _quanlyhocphi.Khoakhoi = quanlyhocphi.Khoakhoi;                
                 _quanlyhocphi.Doituong = quanlyhocphi.Doituong;
                 _quanlyhocphi.DienThoai = quanlyhocphi.DienThoai;
                 _quanlyhocphi.NgayNhapHoc = quanlyhocphi.NgayNhapHoc;

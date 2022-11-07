@@ -19,20 +19,13 @@ namespace Thuctap01.Services
 
         public MuchocphiSvc(DataBaseContext context)
         {
-            _context = context;
-
+            _context = context; 
         }
         public List<MuchocphiModel> GetMuchocphiAll()
         {
             List<MuchocphiModel> list = new List<MuchocphiModel>();
             list = _context.MuchocphiModels.ToList();
-            return list;
-        }
-        public MuchocphiModel GetMuchocphi(int id)
-        {
-            MuchocphiModel muchocphi = null;
-            muchocphi = _context.MuchocphiModels.Find(id);
-            return muchocphi;
+            return list;    
         }
         public int AddMuchocphi(MuchocphiModel muchocphi)
         {
@@ -49,6 +42,13 @@ namespace Thuctap01.Services
             }
             return ret;
         }
+        public MuchocphiModel GetMuchocphi(int id)              
+        {
+            MuchocphiModel muchocphi = null;
+            muchocphi = _context.MuchocphiModels.Find(id);
+            return muchocphi;
+        }
+       
         public int EditMuchocphi(int id, MuchocphiModel muchocphi)
         {
             int ret = 0;
@@ -56,10 +56,10 @@ namespace Thuctap01.Services
             {
                 MuchocphiModel _muchocphi = null;
                 _muchocphi = GetMuchocphi(id);
-
                 _muchocphi.Mamonhoc = muchocphi.Mamonhoc;
                 _muchocphi.Monhoc = muchocphi.Monhoc;
                 _muchocphi.Khoakhoi = muchocphi.Khoakhoi;
+                _muchocphi.nienkhoa = muchocphi.nienkhoa;
                 _muchocphi.ThoiLuong = muchocphi.ThoiLuong;
                 _muchocphi.Donvitinh = muchocphi.Donvitinh;
                 _muchocphi.mucthu = muchocphi.mucthu;
