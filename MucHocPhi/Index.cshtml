@@ -1,0 +1,153 @@
+﻿@model IEnumerable<Thuctap01.Models.MuchocphiModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    @*Required meta tags*@
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="~/css/bootstrap-3.4.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/bootstrap-3.4.1-dist/css/bootstrap.min.css" />
+    @*CSS only*@
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    @*JavaScript Bundle with Popper*@
+    <script src="~/bootstrap-3.4.1-dist/js/bootstrap.js"></script>
+    <script src="~/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    @*Bootstrap CSS*@
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<form class="row g-3">
+    <div class="col-md-6">
+        <b>Quản Lý Học Phí > <a style="color:orange" asp-action="Index">Danh sách mức học phí</a></b>
+    </div>
+</form>
+<br />
+
+<div class="row g-2">
+    <div class="col-md">
+        <h2>Danh Sách Mức Học Phí </h2>
+    </div>
+    <div class="col-md" style="text-align:right">
+        <button style="background: cornflowerblue; border-radius: 7px; height: 45px;"><a asp-action="Create" style="color: white; text-decoration: none"><h7>+Thêm Mới</a></button>
+        <button style="background:gray; border-radius: 7px;height:45px;"><a asp-action="" style="color: white; text-decoration: none ">Ngừng Áp Dụng</a></button>
+        <button style="background: royalblue; border-radius: 7px; color: white; width: 200px; height: 43px; text-decoration: none">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Xuất Dữ Liệu</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item">Xuất XSL</a></li>
+                <li><a class="dropdown-item">Xuất CSV</a></li>
+            </ul>
+        </button>
+    </div>
+</div>
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+
+        <input type="text" class="form-control" placeholder="Nhập Mã/Tên Môn Học" aria-label="Nhập Mã/Tên Môn Học" style="width: 230px;height:40px; border: 1px solid gray; border-radius: 10px; background: white; color: black; ">
+        &nbsp
+        <form class="d-flex">
+            <input type="text" class="form-control" placeholder="Khoa-Khối" aria-label="Khoa-Khối" style="width: 170px;height:40px; border: 1px solid gray; border-radius: 10px; background: white; color: black; ">
+            &nbsp
+            <input type="text" class="form-control" placeholder="Môn Học" aria-label="Môn Học" style="width: 170px;height:40px; border: 1px solid gray; border-radius: 10px; background: white; color: black; ">
+            &nbsp
+            <input type="text" class="form-control" placeholder="Trạng Thái" aria-label="Trạng Thái" style="width: 170px;height:40px; border: 1px solid gray; border-radius: 10px; background: white; color: black; ">
+            &nbsp
+            <button class="btn btn-group" type="submit" style="background: orange; color: white; width: 170px">Tìm Kiếm </button>
+        </form>
+    </div>
+</nav>
+
+<table class="table">
+    <thead>
+        <tr style="color: black; background: blanchedalmond">
+
+            <th>
+                @Html.DisplayNameFor(model => model.Monhoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khoakhoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThoiLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Donvitinh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mucthu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tonghocphi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trangthai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nienkhoa)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Monhoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Khoakhoi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThoiLuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Donvitinh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.mucthu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tonghocphi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Trangthai)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.nienkhoa)
+                </td>*@
+                <td>
+                    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+                        <a class="navbar-brand" href="#"></a>
+                        <ul class="nav nav-pills" style="width:1px;height:auto;text-align:right ">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#scrollspyHeading3">Áp Dụng</a></li>
+                                    <li><a class="dropdown-item" asp-action="Details" asp-route-id="@item.Mamonhoc">Thông Tin Chi Tiết</a></li>
+                                    <li><a class="dropdown-item" asp-action="Edit" asp-route-id="@item.Mamonhoc">Cập Nhật</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+<nav aria-label="Page navigation example" style="text-align:right">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,106 @@
+﻿@model IEnumerable<Thuctap01.Models.QuanlyhocphiModel>
+@{
+    ViewData["Title"] = "Thongtinlichsu";
+}
+<form class="row g-3">
+    <div class="col-md-12">
+        <b>Quản lý học phí > <a>Quản lý thu học phí > </a><a style="color:orange">Thông tin lịch sử</a></b>
+    </div>
+</form>
+<br /><br />
+<label style="color:blue">Lịch sử thu học phí</label>
+<table class="table">
+    <thead>
+        <tr style="color: black; background: blanchedalmond">
+            <th scope="col">
+                STT
+            </th>
+            <th scope="col">
+                Mã phiếu thu
+            </th>
+            <th scope="col">
+                Người nộp
+            </th>
+            <th scope="col">
+                Ưu đãi
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hocphi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thucthu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ngaythu)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>#PT001</td>
+            <td>Hưng Trần</td>
+            <td>0</td>
+            <td>
+                1.000.000
+            </td>
+            <td>
+                1.000.000
+            </td>
+            <td>
+                15/10/2020
+            </td>
+            <td style="color:blue">xem phiếu thu</td>
+        </tr>
+    </tbody>
+</table>
+<br /><br /><br />
+<label style="color:blue">Lịch sử gửi thông báo</label>
+<table class="table">
+    <thead>
+        <tr style="color: black; background: blanchedalmond">
+            <th scope="col">
+                STT
+            </th>
+            <th scope="col">
+                Tiêu đề
+            </th>
+            <th scope="col">
+                Nội dung
+            </th>
+            <th scope="col">
+                Người gửi
+            </th>
+            <th scope="col">
+                Ngày gửi
+            </th>
+            <th scope="col">
+                Giờ gửi
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="color:blue">xem thông báo</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+

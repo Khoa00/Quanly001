@@ -1,0 +1,67 @@
+﻿@model Thuctap01.Models.QuanlyluongModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Thêm Bảng Tính Lương</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Mabangluong" class="control-label"></label>
+                <input asp-for="Mabangluong" class="form-control" />
+                <span asp-validation-for="Mabangluong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Loaihopdong" class="control-label"></label>
+                <input asp-for="Loaihopdong" class="form-control" />
+                <span asp-validation-for="Loaihopdong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Tháng Tính Lương</label>
+                <input class="form-control" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kitinhluong" class="control-label"></label>
+                <input asp-for="Kitinhluong" class="form-control" />
+                <span asp-validation-for="Kitinhluong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tongluongphaichi" class="control-label"></label>
+                <input asp-for="Tongluongphaichi" class="form-control" />
+                <span asp-validation-for="Tongluongphaichi" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+            <label asp-for="Dachiluong" class="control-label"></label>
+            <input asp-for="Dachiluong" class="form-control" />
+            <span asp-validation-for="Dachiluong" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Chuchiluong" class="control-label"></label>
+            <input asp-for="Chuchiluong" class="form-control" />
+            <span asp-validation-for="Chuchiluong" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Trangthai" class="control-label"></label>
+            <input asp-for="Trangthai" class="form-control" />
+            <span asp-validation-for="Trangthai" class="text-danger"></span>
+        </div>*@
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <input type="submit" value="Lưu" class="btn btn-primary" style="background:orange" />
+                </div>
+                <div class="col-md-6" style="text-align:right">
+                    <a asp-action="Index" class="btn btn-primary">Hủy</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

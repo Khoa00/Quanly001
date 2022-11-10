@@ -1,0 +1,72 @@
+﻿@model Thuctap01.Models.GiangvienModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div>
+    <h4 style="color:orangered">Xem Thông Tin Chi Tiết</h4>
+    <hr />
+    <dl class="row g-3">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Magiangvien)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Magiangvien)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Hovaten)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hovaten)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.manghach)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.manghach)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Chucvu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Chucvu)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tobomon)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tobomon)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Loaihopdong)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Loaihopdong)
+        </dd>
+        @*<dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ngaybatdaulamviec)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ngaybatdaulamviec)
+        </dd>*@
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nghiphep)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nghiphep)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Trangthai)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Trangthai)
+        </dd>
+    </dl>
+</div>
+<div>
+    <div class="col-2">
+        @*<a asp-action="Edit" asp-route-id="@Model.Magiangvien" class="btn btn-primary" >Update</a>*@
+        <a asp-action="Index" class="btn btn-primary">Quay Lại</a>
+    </div>
+</div>
+    

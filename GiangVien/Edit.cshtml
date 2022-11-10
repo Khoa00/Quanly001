@@ -1,0 +1,91 @@
+﻿@model Thuctap01.Models.GiangvienModel
+@{
+    ViewData["Title"] = "Edit";
+
+}
+<form class="row g-3">
+    <div class="col-md-12">
+        <b>Quản Lý Lương > <a> Hồ Sơ Giảng Viên > </a><a  style="color:orange" asp-action="Edit">Cập Nhật Hồ Sơ</a></b>
+    </div>
+</form>
+<br />
+<h2 style="text-align:center"><b>Thông Tin Giảng Viên</b></h2>
+<hr />
+<form class="row g-3" asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Magiangvien" />
+    <div class="col-md-6">
+        <label asp-for="Magiangvien" class="control-label"></label>
+        <input asp-for="Magiangvien" class="form-control" />
+        <span asp-validation-for="Magiangvien" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Hovaten" class="control-label"></label>
+        <input asp-for="Hovaten" class="form-control" />
+        <span asp-validation-for="Hovaten" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label class="control-label">Trình độ đào tạo</label>
+        <input class="form-control" />
+        <span class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="manghach" class="control-label"></label>
+        <input asp-for="manghach" class="form-control" />
+        <span asp-validation-for="manghach" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Chucvu" class="control-label"></label>
+        <input asp-for="Chucvu" class="form-control" />
+        <span asp-validation-for="Chucvu" class="text-danger"></span>
+    </div>
+
+
+    <div class="col-md-6">
+        <label asp-for="Tobomon" class="control-label"></label>
+        <input asp-for="Tobomon" class="form-control" />
+        <span asp-validation-for="Tobomon" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label class="control-label">Nơi Cấp</label>
+        <input class="form-control" />
+        <span class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label class="control-label">Ngày Cấp</label>
+        <input class="form-control" />
+        <span class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label class="control-label">Nơi Cấp</label>
+        <input class="form-control" />
+        <span class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Ngayvaotruong" class="control-label"></label>
+        <input asp-for="Ngayvaotruong" class="form-control" />
+        <span asp-validation-for="Ngayvaotruong" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="col-md-12">
+        <label class="control-label">Địa Chỉ</label>&ensp;
+        <select class="col-md-3" style="height:37px">
+            <option>[Tỉnh/TP]</option>
+            <option>...</option>
+        </select>
+        <select class="col-md-4" style="height:37px">
+            <option>[Quận/Huyện]</option>
+            <option>...</option>
+        </select>
+        <select class="col-md-4" style="height:37px">
+            <option>[Xã/Phường]</option>
+            <option>...</option>
+        </select>
+        <span class="text-danger"></span>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
