@@ -1,0 +1,56 @@
+﻿@model Thuctap01.Models.QuanlyluongModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>QuanlyluongModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Mabangluong" />
+            <div class="form-group">
+                <label asp-for="Tenbangluong" class="control-label"></label>
+                <input asp-for="Tenbangluong" class="form-control" />
+                <span asp-validation-for="Tenbangluong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kitinhluong" class="control-label"></label>
+                <input asp-for="Kitinhluong" class="form-control" />
+                <span asp-validation-for="Kitinhluong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tongluongphaichi" class="control-label"></label>
+                <input asp-for="Tongluongphaichi" class="form-control" />
+                <span asp-validation-for="Tongluongphaichi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dachiluong" class="control-label"></label>
+                <input asp-for="Dachiluong" class="form-control" />
+                <span asp-validation-for="Dachiluong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chuchiluong" class="control-label"></label>
+                <input asp-for="Chuchiluong" class="form-control" />
+                <span asp-validation-for="Chuchiluong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trangthai" class="control-label"></label>
+                <input asp-for="Trangthai" class="form-control" />
+                <span asp-validation-for="Trangthai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

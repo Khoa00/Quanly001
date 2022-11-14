@@ -1,0 +1,114 @@
+﻿@model Thuctap01.Models.hethonguudaimodel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Thêm ưu đãi</h1>
+
+<div class="container">
+    <div class="col-md-6">
+        <b>Ưu đãi/ <a style="color: orange; text-decoration: none" asp-action="Create">Thêm ưu đãi</a></b>
+    </div>
+</div>
+<br/><br />
+<div class="row g-3">
+    <div class="col-md-8" style="border-radius: 10px; box-shadow: 1px 1px 1px 1px orange; ">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row" style="background: aliceblue;height:90px">
+                <div class="col">
+                    <b><label class="control-label">Hình thức ưu đãi</label></b>
+                    <input class="form-control" placeholder="Chương trình ưu đãi"/>
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+            <div class="row" style="background: aliceblue;height:90px">
+                <div class="col">
+                    <b><label asp-for="Uudai" class="control-label"></label></b>
+                    <input asp-for="Uudai" class="form-control" placeholder="Ví dụ: Chương trình ưu đãi học phí cho năm học mới" />
+                    <span asp-validation-for="Uudai" class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+            <div class="row" style="background: aliceblue; height: 90px">
+                <div class="col">
+                    <b><label asp-for="Loaiuudai" class="control-label"></label></b>
+                    @*<input asp-for="Loaiuudai" class="form-control" />*@
+                    <select asp-for="Loaiuudai" class="form-select" aria-label="Default select example" style="color: black; width: 300px; height: 40px; border: 1px solid gray; border-radius: 3px;">
+                        <option selected>Chọn loại ưu đãi</option>
+                        <option value="1">Theo phần trăm</option>
+                        <option value="2">Theo số tiền</option>
+                    </select>
+                    <span asp-validation-for="Loaiuudai" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <b><label asp-for="Giamhocphi" class="control-label"></label></b>
+                    <input asp-for="Giamhocphi" class="form-control" />
+                    <span asp-validation-for="Giamhocphi" class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+            <div class="row" style="background: aliceblue; height: 90px">
+                <div class="col">
+                    <b><label asp-for="Apdung" class="control-label"></label></b>
+                    @*<input asp-for="Apdung" class="form-control" />*@
+                    <span asp-validation-for="Apdung" class="text-danger"></span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Nên-khóa hiện tại
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Học kì
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Khoa khối
+                        </label>
+                    </div>
+                    <span asp-validation-for="Apdung" class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+            @*<div class="form-group">
+            <label asp-for="Trangthai" class="control-label"></label>
+            <input asp-for="Trangthai" class="form-control" />
+            <span asp-validation-for="Trangthai" class="text-danger"></span>
+        </div>*@
+            @*<div class="form-group">
+            <label asp-for="Batdau" class="control-label"></label>
+            <input asp-for="Batdau" class="form-control" />
+            <span asp-validation-for="Batdau" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Ketthuc" class="control-label"></label>
+            <input asp-for="Ketthuc" class="form-control" />
+            <span asp-validation-for="Ketthuc" class="text-danger"></span>
+        </div>*@
+            <div class="row">
+                <div class="col-md-8">
+                    <input type="submit" value="Lưu" class="btn btn-primary" style="background: orange;" />
+                    <a asp-action="Index" class="btn btn-primary">Quay lại</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4" style="background: aliceblue; border-radius: 10px; box-shadow: 1px 1px 1px 1px orange; text-align: left;">
+        <b>Tổng quan ưu đãi</b>
+        <br /><br />
+        <p>Tên chương trình Ưu đãi</p>
+        <br />
+        <p>- Loại...:</p>
+        <p>- Trạng thái:</p>
+        <p>- Giảm:...%</p>
+        <p>- Áp dụng từ... giờ... phút giây...  :</p>
+    </div>
+</div>
+

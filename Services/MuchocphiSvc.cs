@@ -56,16 +56,13 @@ namespace Thuctap01.Services
             {
                 MuchocphiModel _muchocphi = null;
                 _muchocphi = GetMuchocphi(id);
-                _muchocphi.Mamonhoc = muchocphi.Mamonhoc;
-                _muchocphi.Monhoc = muchocphi.Monhoc;
-                _muchocphi.Khoakhoi = muchocphi.Khoakhoi;
                 _muchocphi.nienkhoa = muchocphi.nienkhoa;
+                _muchocphi.Khoakhoi = muchocphi.Khoakhoi;
+               
                 _muchocphi.ThoiLuong = muchocphi.ThoiLuong;
                 _muchocphi.Donvitinh = muchocphi.Donvitinh;
                 _muchocphi.mucthu = muchocphi.mucthu;
-                _muchocphi.nienkhoa = muchocphi.nienkhoa;
                 _muchocphi.Tonghocphi = muchocphi.Tonghocphi;
-                _muchocphi.Trangthai = muchocphi.Trangthai;
 
                 _context.Update(_muchocphi);
                 _context.SaveChanges();

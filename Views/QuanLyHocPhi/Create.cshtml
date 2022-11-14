@@ -72,16 +72,12 @@
                     <input asp-for="Ngaythu" class="form-control" />
                     <span asp-validation-for="Ngaythu" class="text-danger"></span>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="col-1">
-                            <input type="submit" value="Lưu" class="btn btn-primary" style="text-align:left;background:orangered" />
-                        </div>
-                        <div class="col-2">
-                            <a asp-action="Index" class="btn btn-primary">Quay Lại</a>
-                        </div>
-                    </div>
-                </div>
+                    <div class="col-md-2">
+                        <input type="submit" value="Lưu" class="btn btn-primary" style="text-align:left;background:orangered" />
+                     </div>
+                     <div class="col-md-4">
+                        <a asp-action="Index" class="btn btn-primary">Quay Lại</a>
+                     </div>
             </form>
         </div>
         @*<div class="modal-footer">

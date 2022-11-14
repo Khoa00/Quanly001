@@ -24,7 +24,7 @@ namespace Thuctap01.Services
         public List<QuanlyhocphiModel> GetQuanlyhocphiAll()
         {
             List<QuanlyhocphiModel> list = new List<QuanlyhocphiModel>();
-            list = _context.QuanyhocphiModelss.ToList();
+            list = _context.QuanyhocphiModels.ToList();
             return list;
         }
        
@@ -46,7 +46,7 @@ namespace Thuctap01.Services
         public QuanlyhocphiModel GetQuanlyhocphi(int id)
         {
             QuanlyhocphiModel quanlyhocphi = null;
-            quanlyhocphi = _context.QuanyhocphiModelss.Find(id);
+            quanlyhocphi = _context.QuanyhocphiModels.Find(id);
             return quanlyhocphi;
         }
         public int EditQuanlyhocphi(int id, QuanlyhocphiModel quanlyhocphi)
@@ -66,7 +66,7 @@ namespace Thuctap01.Services
                 _quanlyhocphi.DienThoai = quanlyhocphi.DienThoai;
                 _quanlyhocphi.NgayNhapHoc = quanlyhocphi.NgayNhapHoc;
                 _quanlyhocphi.Hocphi = quanlyhocphi.Hocphi;
-                _quanlyhocphi.Tonghocphi = quanlyhocphi.Tonghocphi;
+                //_quanlyhocphi.Tonghocphi = quanlyhocphi.Tonghocphi;
                 _quanlyhocphi.Trangthai = quanlyhocphi.Trangthai;
                 _quanlyhocphi.Thucthu = quanlyhocphi.Thucthu;
                 _quanlyhocphi.Ngaythu = quanlyhocphi.Ngaythu;

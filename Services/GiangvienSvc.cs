@@ -58,25 +58,13 @@ namespace Thuctap01.Services
 
                 _giangvien.Magiangvien = giangvien.Magiangvien;
                 _giangvien.Hovaten = giangvien.Hovaten;
-                _giangvien.Gioitinh = giangvien.Gioitinh;
-                _giangvien.NgaySinh = giangvien.NgaySinh;
-                _giangvien.SoCMND = giangvien.SoCMND;
-                _giangvien.Ngaycap = giangvien.Ngaycap;
-                _giangvien.Noicap = giangvien.Noicap;
-                _giangvien.Diachi = giangvien.Diachi;
-                _giangvien.BHXH = giangvien.BHXH;
-                _giangvien.Trinhdodaotao = giangvien.Trinhdodaotao;
+                _giangvien.Nghiphep = giangvien.Nghiphep;
                 _giangvien.Chucvu = giangvien.Chucvu;
                 _giangvien.Trangthai = giangvien.Trangthai;
                 _giangvien.manghach = giangvien.manghach;
-                _giangvien.Nghiphep = giangvien.Nghiphep;
+                
                 _giangvien.Loaihopdong = giangvien.Loaihopdong;
                 _giangvien.Tobomon = giangvien.Tobomon;
-                _giangvien.Vanbanquyetdinh = giangvien.Vanbanquyetdinh;
-                _giangvien.Ngayapdungchucvu = giangvien.Ngayapdungchucvu;
-                _giangvien.Ngaybatdaulamviec = giangvien.Ngaybatdaulamviec;
-
-
                 _context.Update(_giangvien);
                 _context.SaveChanges();
                 ret = giangvien.Magiangvien;

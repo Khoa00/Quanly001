@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Baocaohocphi";
+    ViewData["Title"] = "Baocaohocphitheocot";
 }
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
@@ -21,13 +21,14 @@
 </head>
 <form class="row g-3">
     <div class="col-md-6">
-        <b>Quản lý học phí > <a style="color:orange" asp-action="Baocaohocphi">Báo cáo thu học phí</a></b>
+        <b>Quản lý học phí > <a style="color:orange" asp-action="">Báo cáo thu học phí</a></b>
     </div>
 </form>
-<br /><br />
+<br />
+<br />
 <div class="row g-2">
     <div class="col-md">
-        <h3>Danh Sách Báo Cáo</h3>
+        <h3>Báo cáo thu học phi</h3>
     </div>
     <div class="col-md" style="text-align:center">
         <div class="btn-group dropend" style="width:150px;height:40px">
@@ -35,9 +36,9 @@
                 Thêm hiển thị
             </button>
             <ul class="dropdown-menu" style="width:400px">
-                <li><b>Tùy chọn hiển thị báo cáo</b></li>
+                <li>Tùy chọn hiển thị báo cáo</li>
                 <li></li>
-                <li><b>Học viên</b></li>
+                <li>Học viên</li>
                 <li class="form-check">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
@@ -64,7 +65,7 @@
                         </label>
                     </div>
                 </li>
-                <li><b>Thực thu</b></li>
+                <li>Thực thu</li>
                 <li class="form-check">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
@@ -85,7 +86,7 @@
                         </label>
                     </div>
                 </li>
-                <li><b>Chưa thu</b></li>
+                <li>Chưa thu</li>
                 <li class="form-check">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
@@ -105,8 +106,7 @@
                             Học viên được giảm 50% hp
                         </label>
                     </div>
-                </li>  
-                <a asp-action="Baocaohocphi1" class="btn btn-primary" style="width:auto; height:auto;">Xác nhận</a>
+                </li>
             </ul>
 
             <button style="background: royalblue; border-radius: 7px; color: white; width: 180px; height: 40px;">
@@ -151,22 +151,38 @@
         <div class="col-md-12">
             <table class="table">
                 <thead>
-                    <tr style="color: black; background: blanchedalmond">
+                    <tr style="color: black; background: blanchedalmond;text-align:center">
                         <th scope="col">
                             STT
                         </th>
                         <th scope="col">
-                            Khoa-khối 
+                            Khoa-khối
                         </th>
-                        <th scope="col">
+                        <th colspan="4">
                             Học viên(Người)
                         </th>
-                        <th scope="col">
+                        <th colspan="4">
                             Thực thu(VNĐ)
                         </th>
-                        <th scope="col">
+                        <th colspan="4">
                             Chưa thu(VNĐ)
                         </th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Đóng 100%</th>
+                        <th>Giảm 100%</th>
+                        <th>Giảm 75%</th>
+                        <th>Tổng</th>
+                        <th>Đóng 100%</th>
+                        <th>Giảm 70%</th>
+                        <th>Giảm 50%</th>
+                        <th>Tổng</th>
+                        <th>Đóng 100%</th>
+                        <th>Giảm 100%</th>
+                        <th>Giảm 75%</th>
+                        <th>Tổng</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -176,10 +192,28 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <th scope="row"></th>
+                        <th></th>
                         <td>Kinh tế </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -190,10 +224,28 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td>Ngân hàng</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -204,10 +256,28 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td>Quản trị</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -218,10 +288,28 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th scope="row"></th>
                         <td>Kinh doanh quốc tế</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -232,9 +320,27 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
-                    <tr ROWSPAN=2>
-                        <td><b>Tổng Cộng</b></td>
+                    <tr>
+                        <td colspan="2"  style="text-align:center"><b>Tổng Cộng</b></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>

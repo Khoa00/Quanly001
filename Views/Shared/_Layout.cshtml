@@ -8,139 +8,141 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Thuctap01</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>*@
-                
-            @*</nav>*@
-            <div class="row g-3">
-                <nav class="col-md-2" style="background: orange;">
-                    <div class="card-header" id="headingOne">
-                        <h3 class="mb-0">
-                            <button class="btn btn-link" style="height: 60px; width: 110px; text-decoration: none" >
-                                <div class="col-md-4">
-                                    <a style="color: black; "><h5>ALATA</h5></a>
-                                    <a style="color:white;"><h5>Media</h5></a>
-                                </div>
-                            </button>
-                        </h3>
-                    </div>
-                </nav>
-                <nav class="col-md-10" style="background: white;"></nav>
-                <aside class="col-md-2" style="height:1000px;background: darkblue">
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header" id="headingOne" style="background: darkblue;">
-                                <h3 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white; text-decoration: none">
-                                        <a asp-controller="Home" asp-action="Index">
-                                            TRANG CHỦ
-                                        </a>
-                                    </button>
-                                </h3>
-                            </div>
-                            <div class="card" style="background: mediumblue;">
-                                <div class="card-header" id="headingOne">
+    <form>
+        <header>
+            <div class="container">
+                @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Thuctap01</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>*@
+
+                @*</nav>*@
+                <div class="row g-3">
+                    <nav class="col-md-2" style="background: orange;">
+                        <div class="card-header" id="headingOne">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link" style="height: 60px; width: 110px; text-decoration: none">
+                                    <div class="col-md-4">
+                                        <a style="color: black; "><h5>ALATA</h5></a>
+                                        <a style="color:white;"><h5>Media</h5></a>
+                                    </div>
+                                </button>
+                            </h3>
+                        </div>
+                    </nav>
+                    <nav class="col-md-10" style="background: white;"></nav>
+                    <aside class="col-md-2" style="height:1000px;background: darkblue">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne" style="background: darkblue;">
                                     <h3 class="mb-0">
                                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white; text-decoration: none">
-                                            QUẢN LÝ HỌC PHÍ
+                                            <a asp-controller="Home" asp-action="Index">
+                                                TRANG CHỦ
+                                            </a>
                                         </button>
                                     </h3>
                                 </div>
+                                <div class="card" style="background: mediumblue;">
+                                    <div class="card-header" id="headingOne">
+                                        <h3 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white; text-decoration: none">
+                                                QUẢN LÝ HỌC PHÍ
+                                            </button>
+                                        </h3>
+                                    </div>
 
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body p-0">
-                                        <ul class="list-group">
-                                            <li class="list-group-item"><a asp-controller="MucHocPhi" asp-action="Index" style="text-decoration: none">Danh sách mức học phí</a></li>
-                                            <li class="list-group-item"><a asp-controller="QuanLyHocPhi" asp-action="Index" style="text-decoration: none">Quản lý học phí</a></li>
-                                            <li class="list-group-item"><a asp-controller="QuanLyHocPhi" asp-action="Baocaohocphi" style="text-decoration: none">Báo Cáo Học Phí</a></li>
-                                        </ul>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body p-0">
+                                            <ul class="list-group">
+                                                <li class="list-group-item"><a asp-controller="MucHocPhi" asp-action="Index" style="text-decoration: none">Danh sách mức học phí</a></li>
+                                                <li class="list-group-item"><a asp-controller="QuanLyHocPhi" asp-action="Index" style="text-decoration: none">Quản lý học phí</a></li>
+                                                <li class="list-group-item"><a asp-controller="QuanLyHocPhi" asp-action="Baocaohocphi" style="text-decoration: none">Báo Cáo Học Phí</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" style="background: mediumblue; ">
-                                <div class="card-header" id="headingOne">
-                                    <h4 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white; text-decoration: none">
-                                            QUẢN LÝ LƯƠNG
-                                        </button>
-                                    </h4>
-                                </div>
+                                <div class="card" style="background: mediumblue; ">
+                                    <div class="card-header" id="headingOne">
+                                        <h4 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: white; text-decoration: none">
+                                                QUẢN LÝ LƯƠNG
+                                            </button>
+                                        </h4>
+                                    </div>
 
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body p-0">
-                                        <ul class="list-group">
-                                            <li class="list-group-item"><a asp-controller="GiangVien" asp-action="Index" style="text-decoration: none">Hồ sơ giảng viên</a></li>
-                                            <li class="list-group-item">Tính lương</li>
-                                            <li class="list-group-item">Báo cáo chi lương</li>
-                                        </ul>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body p-0">
+                                            <ul class="list-group">
+                                                <li class="list-group-item"><a asp-controller="GiangVien" asp-action="Index" style="text-decoration: none">Hồ sơ giảng viên</a></li>
+                                                <li class="list-group-item"><a asp-controller="Quanlyluong" asp-action="Index" style="text-decoration: none">Tổng hợp bảng lương</a></li>
+                                                <li class="list-group-item"><a asp-controller="Luong" asp-action="Baocaochiluong" style="text-decoration: none">Báo cáo chi lương</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" style="background: mediumblue; ">
-                                <div class="card-header" id="headingTwo">
-                                    <h4 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: white; text-decoration: none" >
-                                            THÔNG BÁO
-                                        </button>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                    <div class="card-body p-0">
-                                        <ul class="list-group">
-                                            <li class="list-group-item">Thông báo bủa Ttôi</li>
-                                            <li class="list-group-item">Dành cho học viên</li>
-                                            <li class="list-group-item">Dành cho giảng viên</li>
+                                <div class="card" style="background: mediumblue; ">
+                                    <div class="card-header" id="headingTwo">
+                                        <h4 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: white; text-decoration: none">
+                                                THÔNG BÁO
+                                            </button>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                        <div class="card-body p-0">
+                                            <ul class="list-group">
+                                                <li class="list-group-item"><a asp-controller="Thongbao" asp-action="Index" style="text-decoration: none">Thông báo bủa Tôi</a></li>
+                                                <li class="list-group-item"><a asp-controller="" asp-action="Danhchohocvien" style="text-decoration: none">Dành cho học viên</a></li>
+                                                <li class="list-group-item"><a asp-controller="" asp-action="Danhchogiangvien" style="text-decoration: none">Dành cho giảng viên</a></li>
 
-                                        </ul>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card" style="background: mediumblue; ">
-                                <div class="card-header" id="headingThree">
-                                    <h4 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: white; text-decoration: none">
-                                            HỆ THỐNG
-                                        </button>
-                                    </h4>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                    <div class="card-body p-0">
-                                        <ul class="list-group">
-                                            <li class="list-group-item">Cài đặt quản lý học phí</li>
-                                            <li class="list-group-item">Cài đặt quản lý lương</li>
-                                            <li class="list-group-item">Số hiệu hệ thống</li>
-                                        </ul>
+                                <div class="card" style="background: mediumblue; ">
+                                    <div class="card-header" id="headingThree">
+                                        <h4 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: white; text-decoration: none">
+                                                HỆ THỐNG
+                                            </button>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body p-0">
+                                            <ul class="list-group">
+                                                <li class="list-group-item"><a asp-controller="Hethonguudai" asp-action="Caidatquanlyhocphi" style="text-decoration: none">Cài đặt quản lý học phí</a></li>
+                                                <li class="list-group-item"><a asp-controller="Hethonguudai" asp-action="Caidatquanlyluong" style="text-decoration: none">Cài đặt quản lý lương</a></li>
+                                                <li class="list-group-item"><a asp-controller="Hethonguudai" asp-action="Createhethong" style="text-decoration: none">Số hiệu hệ thống</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </aside>
-                <article class="col-md-10">
-                    <div class="container">
-                        <main role="main" class="pb-3" style="background: white;">
-                            @RenderBody()
-                        </main>
-                    </div>
-                </article>
+                    </aside>
+                    <article class="col-md-10">
+                        <div class="container" style="background: darkgrey; width:auto;height:900px">
+                            <main role="main" class="pb-3" >
+                                @RenderBody()
+                            </main>
+                        </div>
+                    </article>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <footer class="border-top footer text-muted">
-        <div class="container" style="text-align:center">
-            a copyright Alta Media 2020 All rights reserved</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+        <footer class="border-top footer text-muted">
+            <div class="container" style="text-align:center">
+                a copyright Alta Media 2020 All rights reserved</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </form>
 </body>
 </html>

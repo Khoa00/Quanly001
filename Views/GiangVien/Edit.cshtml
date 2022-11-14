@@ -20,101 +20,72 @@
         <span asp-validation-for="Magiangvien" class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="BHXH " class="control-label"></label>
-        <input asp-for="BHXH" class="form-control" />
-        <span asp-validation-for="BHXH" class="text-danger"></span>
-    </div>
-    <div class="col-md-6">
         <label asp-for="Hovaten" class="control-label"></label>
         <input asp-for="Hovaten" class="form-control" />
         <span asp-validation-for="Hovaten" class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="Trinhdodaotao" class="control-label"></label>
-        <input asp-for="Trinhdodaotao" class="form-control" />
-        <span asp-validation-for="Trinhdodaotao" class="text-danger"></span>
+        <label class="control-label">Trình độ đào tạo</label>
+        <input class="form-control" />
+        <span class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="NgaySinh" class="control-label"></label>
-        <input asp-for="NgaySinh" class="form-control" />
-        <span asp-validation-for="NgaySinh" class="text-danger"></span>
+        <label asp-for="manghach" class="control-label"></label>
+        <input asp-for="manghach" class="form-control" />
+        <span asp-validation-for="manghach" class="text-danger"></span>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-6">
         <label asp-for="Chucvu" class="control-label"></label>
         <input asp-for="Chucvu" class="form-control" />
         <span asp-validation-for="Chucvu" class="text-danger"></span>
     </div>
-    <div class="col-md-3">
-        <label asp-for="Gioitinh" class="control-label"></label>
-        <br />
-        <select asp-for="Gioitinh" class="col-md-4" style="height:37px;">
-            <option>...</option>
-            <option>Nam</option>
-            <option>Nữ</option>
-        </select>
-        <span asp-validation-for="Gioitinh" class="text-danger"></span>
-    </div>
+
+
     <div class="col-md-6">
         <label asp-for="Tobomon" class="control-label"></label>
         <input asp-for="Tobomon" class="form-control" />
         <span asp-validation-for="Tobomon" class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="SoCMND" class="control-label"></label>
-        <input asp-for="SoCMND" class="form-control" />
-        <span asp-validation-for="SoCMND" class="text-danger"></span>
-    </div>
-
-    <div class="col-md-6">
-        <label asp-for="Vanbanquyetdinh" class="control-label"></label>
-        <input asp-for="Vanbanquyetdinh" type="file" class="form-control" id="inputGroupFile01" style="color:blue" />
-        <span asp-validation-for="Vanbanquyetdinh" class="text-danger"></span>
+        <label class="control-label">Nơi Cấp</label>
+        <input class="form-control" />
+        <span class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="Ngaycap" class="control-label"></label>
-        <input asp-for="Ngaycap" class="form-control" />
-        <span asp-validation-for="Ngaycap" class="text-danger"></span>
+        <label class="control-label">Ngày Cấp</label>
+        <input class="form-control" />
+        <span class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="Noicap" class="control-label"></label>
-        <input asp-for="Noicap" class="form-control" />
-        <span asp-validation-for="Noicap" class="text-danger"></span>
+        <label class="control-label">Nơi Cấp</label>
+        <input class="form-control" />
+        <span class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="Ngayapdungchucvu" class="control-label"></label>
-        <input asp-for="Ngayapdungchucvu" class="form-control" />
-        <span asp-validation-for="Ngayapdungchucvu" class="text-danger"></span>
+        <label asp-for="Ngayvaotruong" class="control-label"></label>
+        <input asp-for="Ngayvaotruong" class="form-control" />
+        <span asp-validation-for="Ngayvaotruong" class="text-danger"></span>
     </div>
-
+    <br />
     <div class="col-md-12">
-        <label asp-for="Diachi" class="control-label"></label>&ensp;
-        <select asp-for="Diachi" class="col-md-3" style="height:37px">
+        <label class="control-label">Địa Chỉ</label>&ensp;
+        <select class="col-md-3" style="height:37px">
             <option>[Tỉnh/TP]</option>
             <option>...</option>
         </select>
-        <select asp-for="Diachi" class="col-md-4" style="height:37px">
+        <select class="col-md-4" style="height:37px">
             <option>[Quận/Huyện]</option>
             <option>...</option>
         </select>
-        <select asp-for="Diachi" class="col-md-4" style="height:37px">
+        <select class="col-md-4" style="height:37px">
             <option>[Xã/Phường]</option>
             <option>...</option>
         </select>
-        <span asp-validation-for="Diachi" class="text-danger"></span>
-    </div>
-    <div class="col-md-12">
-        <label asp-for="Ngaybatdaulamviec" class="control-label"></label>
-        <input asp-for="Ngaybatdaulamviec" class="form-control" />
-        <span asp-validation-for="Ngaybatdaulamviec" class="text-danger"></span>
+        <span class="text-danger"></span>
     </div>
 </form>
-    @*<div class="col-md-3">
-        <input type="submit" value="Lưu" class="btn btn-primary" style="width:130px"/>
-    </div>
-    <div class="col-md-3">
-        <a asp-action="Index" class="btn btn-primary">Quay Lại</a>
-    </div>*@
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
