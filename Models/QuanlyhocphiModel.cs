@@ -52,8 +52,8 @@ namespace Thuctap01.Models
         public double Hocphi { get; set; }
 
 
-        [Required, Range(0, double.MaxValue), Display(Name = "Tổng Học Phí")]
-        public double Tonghocphi { get; set; }
+        //[Required, Range(0, double.MaxValue), Display(Name = "Tổng Học Phí")]
+        //public double Tonghocphi { get; set; }
 
         [Required(ErrorMessage = "Chọn Trạng Thái")]
         [Display(Name = "Trạng Thái")]
@@ -65,6 +65,11 @@ namespace Thuctap01.Models
         [Required(ErrorMessage = "Chọn Ngày Thu"), Display(Name = "Ngày thu")]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? Ngaythu { get; set; }
-        
+
+        //[Required(ErrorMessage = "Chưa thu")]
+        //[Display(Name = "Chưa thu")]
+        //[StringLength(100)]
+        //public string Chuathu { get; set; }
+
     }
 }

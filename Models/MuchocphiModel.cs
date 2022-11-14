@@ -19,6 +19,11 @@ namespace Thuctap01.Models
         [StringLength(100)]
         public string Monhoc { get; set; }
 
+        [Required(ErrorMessage = "Bạn Cần Nhập Niên Khóa")]
+        [Display(Name = "Niên Khóa")]
+        public double nienkhoa { get; set; }
+        
+
         [Required(ErrorMessage = "Bạn Cần Khoa-Khối")]
         [Display(Name = "Khoa-Khối")]
         [StringLength(100)]
@@ -35,10 +40,6 @@ namespace Thuctap01.Models
 
         [Display(Name = "Mức thu/1 đơn vị tính")]
         public int mucthu { get; set; }
-
-        [Required(ErrorMessage = "Bạn Cần Nhập Niên Khóa")]
-        [Display(Name = "Niên Khóa")]
-        public double nienkhoa { get; set; }
 
         [Required, Range(0, double.MaxValue)]
         [Display(Name = "Tổng học phí phải thu")]

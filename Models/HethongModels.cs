@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Thuctap01.Models
 {
-    public class HethongModels
+    public class HethongModels  
     {
         [Key]
         [Required(ErrorMessage = "Bạn Cần Nhập Mã Trường")]
@@ -90,8 +90,43 @@ namespace Thuctap01.Models
         [StringLength(100)]
         public string Donvitiente { get; set; }
 
-        [Required(ErrorMessage = "Bạn Cần Nhập Niên Khóa")]
         [Display(Name = "Niên Khóa")]
         public double nienkhoa { get; set; }
+        //public HethongModels hethongModelss { get; set; }
     }    
+    public class hethonguudaimodel
+    {
+        [Key]
+        [Display(Name = "Mã Ưu đãi")]
+        public int Mauudai { get; set; }
+
+        [Display(Name = "Ưu đãi")]
+        [StringLength(100)]
+        public string Uudai { get; set; }
+
+        [Display(Name = "Loại ưu đãi")]
+        [StringLength(100)]
+        public string Loaiuudai { get; set; }
+
+        [Display(Name = "Giảm học phí")]
+        [StringLength(100)]
+        public string  Giamhocphi { get; set; }
+
+        [Display(Name = "Áp dụng")]
+        [StringLength(100)]
+        public string Apdung { get; set; }
+
+        [Display(Name = "Trạng thái")]
+        public int Trangthai { get; set; }
+
+        [Required(ErrorMessage = "Chọn Ngày Bắt Đầu"), Display(Name = "Bắt đầu")]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime? Batdau { get; set; }
+
+
+        [Required(ErrorMessage = "Chọn Ngày Kết Thúc"), Display(Name = "Kết Thúc")]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime? Ketthuc { get; set; }
+    }
+
 }

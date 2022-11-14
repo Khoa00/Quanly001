@@ -28,40 +28,40 @@ namespace Thuctap01.Models
         [StringLength(100)]
         public string Hovaten { get; set; }
 
-        [Required, Range(1, int.MaxValue, ErrorMessage = "Chọn Giới Tính")]
-        [Display(Name = "Giới Tính")]
-        public Gender Gioitinh { get; set; }
+        //[Required, Range(1, int.MaxValue, ErrorMessage = "Chọn Giới Tính")]
+        //[Display(Name = "Giới Tính")]
+        //public Gender Gioitinh { get; set; }
 
-        [Required(ErrorMessage = "Chọn Ngày Sinh"), Display(Name = "Ngày Sinh")]
-        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime? NgaySinh { get; set; }
+        //[Required(ErrorMessage = "Chọn Ngày Sinh"), Display(Name = "Ngày Sinh")]
+        //[DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        //public DateTime? NgaySinh { get; set; }
 
-        [Required(ErrorMessage = "Bạn Cần Nhập Số CMND/CCCD")]
-        [Display(Name = "Số CMND/CCCD")]
-        public int SoCMND { get; set; }
+        //[Required(ErrorMessage = "Bạn Cần Nhập Số CMND/CCCD")]
+        //[Display(Name = "Số CMND/CCCD")]
+        //public int SoCMND { get; set; }
 
-        [Required(ErrorMessage = "Chọn Ngày Cấp"), Display(Name = "Ngày Cấp")]
-        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime? Ngaycap { get; set; }
+        //[Required(ErrorMessage = "Chọn Ngày Cấp"), Display(Name = "Ngày Cấp")]
+        //[DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        //public DateTime? Ngaycap { get; set; }
 
-        [Required(ErrorMessage = "Bạn Cần Chọn Nơi Cấp")]
-        [Display(Name = "Nơi Cấp")]
+        //[Required(ErrorMessage = "Bạn Cần Chọn Nơi Cấp")]
+        //[Display(Name = "Nơi Cấp")]
+        //[StringLength(100)]
+        //public string Noicap { get; set; }
+
+        //[Required(ErrorMessage = "Bạn Cần Chọn Địa Chỉ")]
+        //[Display(Name = "Địa Chỉ")]
+        //[StringLength(100)]
+        //public string Diachi { get; set; }
+
+        //[Required(ErrorMessage = "Bạn Cần Nhập Số sổ BHXH")]
+        //[Display(Name = "Số sổ BHXH")]
+        //[StringLength(100)]
+        //public string BHXH { get; set; }
+
+        [Display(Name = "Nghĩ phép")]
         [StringLength(100)]
-        public string Noicap { get; set; }
-
-        [Required(ErrorMessage = "Bạn Cần Chọn Địa Chỉ")]
-        [Display(Name = "Địa Chỉ")]
-        [StringLength(100)]
-        public string Diachi { get; set; }
-
-        [Required(ErrorMessage = "Bạn Cần Nhập Số sổ BHXH")]
-        [Display(Name = "Số sổ BHXH")]
-        [StringLength(100)]
-        public string BHXH { get; set; }
-
-        [Display(Name = "Trình độ đào tạo")]
-        [StringLength(100)]
-        public string Trinhdodaotao { get; set; }
+        public string Nghiphep { get; set; }
 
         [Required(ErrorMessage = "Bạn Cần Nhập Chức Vụ")]
         [Display(Name = "Chức Vụ")]
@@ -78,10 +78,6 @@ namespace Thuctap01.Models
         [StringLength(100)]
         public string Loaihopdong { get; set; }
 
-        [Display(Name = "Nghĩ Phép")]
-        [StringLength(100)]
-        public string Nghiphep { get; set; }
-
         [Required(ErrorMessage = "Bạn Cần Chọn Trạng Thái")]
         [Display(Name = "Trạng thái")]
         [StringLength(100)]
@@ -90,21 +86,26 @@ namespace Thuctap01.Models
         [Display(Name = "Mã Ngạch")]
         public double manghach { get; set; }
 
-        [Display(Name = "Văn Bản Quyết Định")]
-        [Column(TypeName = "varchar(200)"), MaxLength(100)]
-        public string Vanbanquyetdinh { get; set; }
+        //[Display(Name = "Văn Bản Quyết Định")]
+        //[Column(TypeName = "varchar(200)"), MaxLength(100)]
+        //public string Vanbanquyetdinh { get; set; }
 
-        [NotMapped]
-        [DataType(DataType.Upload)]
-        [Display(Name = "Chọn Văn Bản Quyết Định")]
-        public IFormFile ImageFile { get; set; }
+        //[NotMapped]
+        //[DataType(DataType.Upload)]
+        //[Display(Name = "Chọn Văn Bản Quyết Định")]
+        //public IFormFile ImageFile { get; set; }
 
-        [Required(ErrorMessage = "Chọn Ngày Áp Dụng Chức Vụ"), Display(Name = "Ngày áp dụng chức vụ")]
+        //[Required(ErrorMessage = "Chọn Ngày Áp Dụng Chức Vụ"), Display(Name = "Ngày áp dụng chức vụ")]
+        //[DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        //public DateTime? Ngayapdungchucvu { get; set; }
+
+        [Required(ErrorMessage = "Chọn Ngày Vào Trường"), Display(Name = "Ngày vào trường")]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime? Ngayapdungchucvu { get; set; }
+        public DateTime? Ngayvaotruong { get; set; }
 
-        [Required(ErrorMessage = "Chọn Ngày Bắt Đầu Làm Việc"), Display(Name = "Ngày bắt đầu làm việc")]
-        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime? Ngaybatdaulamviec { get; set; }
+        //public Bangchamcongmodel bangchamcongmodelss { get; set; }
+        //public LichsunghiphepModel lichsunghiphepmodelss { get; set; }
+
+
     }
 }
