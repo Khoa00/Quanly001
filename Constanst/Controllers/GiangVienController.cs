@@ -68,5 +68,17 @@ namespace Thuctap01.Constanst.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
-    }
+        public IActionResult Lichsugiangvien()
+        {
+            return View();
+        }
+        public IActionResult Bangchamcong()
+        {
+            return View();
+        }
+        public IActionResult Danhsachnghiphep()
+        {
+            return View();
+        }
+    }   
 }

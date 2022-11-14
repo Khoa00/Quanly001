@@ -81,5 +81,17 @@ namespace Thuctap01.Controllers
         {
             return View();
         }
+        public IActionResult Baocaohocphitheocot()
+        {
+            return View();
+        }
+        public IActionResult Baocaohocphitheokhoakhoi()
+        {
+            return View();
+        }
+        public IActionResult Baocaohocphitheolop()
+        {
+            return View();
+        }
     }
 }
